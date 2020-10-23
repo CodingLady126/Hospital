@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DrawController" customModule="Hospital" customModuleProvider="target">
+            <connections>
+                <outlet property="blackButton" destination="UJF-xt-6H8" id="RD9-SD-yMM"/>
+                <outlet property="canvasView" destination="pLv-vl-7uJ" id="rV2-r9-HjD"/>
+                <outlet property="containerView" destination="4Hj-cP-DmJ" id="adf-FG-7X6"/>
+                <outlet property="eraserButton" destination="WM6-Ky-r1C" id="FKn-hP-bow"/>
+                <outlet property="redButton" destination="s2G-ms-bzv" id="kgb-Jc-fhn"/>
+                <outlet property="tButton" destination="vTe-Zq-Yzm" id="QcE-vD-Rpu"/>
+                <outlet property="textView" destination="ETh-vI-CMy" id="PEA-CS-spO"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="455" height="417"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YzK-Jv-kWu">
+                    <rect key="frame" x="0.0" y="0.0" width="455" height="48"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="1O9-c2-Tos">
+                            <rect key="frame" x="102.5" y="0.0" width="250" height="48"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTe-Zq-Yzm" customClass="TButton" customModule="Hospital" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="62.5" height="48"/>
+                                    <state key="normal" image="text_icon"/>
+                                    <connections>
+                                        <action selector="tBtnTapped:" destination="-1" eventType="touchUpInside" id="GQl-co-eKO"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJF-xt-6H8" customClass="BlackButton" customModule="Hospital" customModuleProvider="target">
+                                    <rect key="frame" x="62.5" y="0.0" width="62.5" height="48"/>
+                                    <state key="normal" image="icons8-crayon-32"/>
+                                    <connections>
+                                        <action selector="blackBtnTapped:" destination="-1" eventType="touchUpInside" id="ZHJ-jI-210"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s2G-ms-bzv" customClass="RedButton" customModule="Hospital" customModuleProvider="target">
+                                    <rect key="frame" x="125" y="0.0" width="62.5" height="48"/>
+                                    <state key="normal" image="icons8-crayon-32"/>
+                                    <connections>
+                                        <action selector="redBtnTapped:" destination="-1" eventType="touchUpInside" id="sqv-db-5ag"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WM6-Ky-r1C" customClass="EraserButton" customModule="Hospital" customModuleProvider="target">
+                                    <rect key="frame" x="187.5" y="0.0" width="62.5" height="48"/>
+                                    <state key="normal" image="icons8-erase-32"/>
+                                    <connections>
+                                        <action selector="eraserBtnTapped:" destination="-1" eventType="touchUpInside" id="uME-UQ-wbd"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="250" id="z1P-Zr-tto"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="21q-J1-jgl"/>
+                        <constraint firstItem="1O9-c2-Tos" firstAttribute="top" secondItem="YzK-Jv-kWu" secondAttribute="top" id="aWI-bv-VDe"/>
+                        <constraint firstItem="1O9-c2-Tos" firstAttribute="centerX" secondItem="YzK-Jv-kWu" secondAttribute="centerX" id="drf-pJ-1g5"/>
+                        <constraint firstAttribute="bottom" secondItem="1O9-c2-Tos" secondAttribute="bottom" id="yFw-do-dsw"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Hj-cP-DmJ">
+                    <rect key="frame" x="0.0" y="48" width="455" height="325"/>
+                    <subviews>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ETh-vI-CMy" customClass="PrettyTextView" customModule="Hospital" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="455" height="325"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="multiLineWithDoneButton" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </textView>
+                        <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pLv-vl-7uJ" customClass="CanvasView" customModule="Hospital" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="455" height="325"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="pLv-vl-7uJ" secondAttribute="bottom" id="1Li-HX-USj"/>
+                        <constraint firstAttribute="trailing" secondItem="pLv-vl-7uJ" secondAttribute="trailing" id="F1o-uB-8E6"/>
+                        <constraint firstItem="ETh-vI-CMy" firstAttribute="top" secondItem="4Hj-cP-DmJ" secondAttribute="top" id="G2v-YX-pv2"/>
+                        <constraint firstItem="ETh-vI-CMy" firstAttribute="leading" secondItem="4Hj-cP-DmJ" secondAttribute="leading" id="Grj-he-wWy"/>
+                        <constraint firstItem="pLv-vl-7uJ" firstAttribute="top" secondItem="4Hj-cP-DmJ" secondAttribute="top" id="Smi-Ia-WHl"/>
+                        <constraint firstAttribute="trailing" secondItem="ETh-vI-CMy" secondAttribute="trailing" id="rtj-Fs-L8e"/>
+                        <constraint firstAttribute="bottom" secondItem="ETh-vI-CMy" secondAttribute="bottom" id="sED-X5-YG8"/>
+                        <constraint firstItem="pLv-vl-7uJ" firstAttribute="leading" secondItem="4Hj-cP-DmJ" secondAttribute="leading" id="szE-cr-aYK"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uds-3H-nMP" customClass="RoundButton" customModule="Hospital" customModuleProvider="target">
+                    <rect key="frame" x="102.5" y="381" width="250" height="36"/>
+                    <color key="backgroundColor" red="0.90004628900000005" green="0.1291311681" blue="0.071613542739999994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="250" id="Sf9-fh-PJ4"/>
+                        <constraint firstAttribute="height" constant="36" id="VHw-1d-4pq"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <state key="normal" title="Done">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="doneButtonTapped:" destination="-1" eventType="touchUpInside" id="baZ-XB-tvN"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="YzK-Jv-kWu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="0B8-Uk-ZfD"/>
+                <constraint firstItem="YzK-Jv-kWu" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="6xj-VZ-urN"/>
+                <constraint firstItem="4Hj-cP-DmJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="9iP-D5-kZn"/>
+                <constraint firstAttribute="trailing" secondItem="YzK-Jv-kWu" secondAttribute="trailing" id="Alp-bD-Dff"/>
+                <constraint firstItem="uds-3H-nMP" firstAttribute="top" secondItem="4Hj-cP-DmJ" secondAttribute="bottom" constant="8" id="BZP-04-fhR"/>
+                <constraint firstAttribute="trailing" secondItem="4Hj-cP-DmJ" secondAttribute="trailing" id="d2B-Mn-M50"/>
+                <constraint firstItem="4Hj-cP-DmJ" firstAttribute="top" secondItem="YzK-Jv-kWu" secondAttribute="bottom" id="llV-Lh-LxL"/>
+                <constraint firstAttribute="bottom" secondItem="uds-3H-nMP" secondAttribute="bottom" id="ukr-wh-rNI"/>
+                <constraint firstItem="uds-3H-nMP" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="w06-vv-0gU"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="210.86956521739131" y="28.459821428571427"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icons8-crayon-32" width="32" height="32"/>
+        <image name="icons8-erase-32" width="32" height="32"/>
+        <image name="text_icon" width="32" height="32"/>
+    </resources>
+</document>
